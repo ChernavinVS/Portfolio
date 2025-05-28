@@ -43,7 +43,7 @@ const VisitingCard = () => {
         </h1>
         <div className="projects">
           {/* Проект 1 */}
-          <div className="project-box">
+          <div className="project-box img">
             <img src={project1Img} alt="Проект 1" />
             <p>
               разработка тележки на колесах илона<br />
