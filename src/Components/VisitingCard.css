@@ -82,7 +82,18 @@
   
   /* Контактные данные */
   .contacts {
-    margin-top: 40px;
+    /* margin-top: 40px; */
+
+
+display: flex;
+        background-color: #1f3c42;
+
+        /* color: #ffffff; */
+        width: auto;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* height: 100vh; */
+
   }
   
   h1 {
@@ -96,15 +107,41 @@
   
   /* Контактная информация */
   .contact-info {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; */
+
+
+ display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 10px;
+        background-color: #1f3c42;
+
+
   }
   
   .contact-item {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; */
+display: flex;
+        justify-content: flex-start;
+        background-color: #1f3c42;
+        color: white;
+        width: 100%;
+        text-align: left;
+        align-items: center;
+        /* margin-left: 70px; */
+        margin-top: 10px;
+
+
+
+
   }
   
   .contact-item img {

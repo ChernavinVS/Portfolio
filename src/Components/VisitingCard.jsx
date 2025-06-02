@@ -39,7 +39,7 @@ const VisitingCard = () => {
       <div className="content-section">
         {/* Реализованные проекты */}
         <h1>
-          Реализованные проекты <br /> <span className="highlight">в области автоматизации</span>
+          Реализованные проекты <br /> <span className="highlight"> в области автоматизации</span>
         </h1>
         <div className="projects">
           {/* Проект 1 */}
