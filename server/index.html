@@ -1,0 +1,39 @@
+<!-- HTML страница отображающая список постов -->
+<!DOCTYPE html>                            
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Список постов</title>
+</head>
+<body>
+  <h1>Посты</h1>
+  <!-- создание списка posts-list -->
+  <ul id="posts-list"></ul>                        
+
+  <script>
+    // Функция для получения и отображения постов
+    async function loadPosts() {                   // асинхронная функция loadposts
+      try {
+        const response = await fetch('/posts');    // get запрос к /posts, значения сохранить в респонс,
+                                                   // авайт останавливает выполенение кода пока не будут получены данные
+        const posts = await response.json();       // преобразует респонс в json и сохраняет обьект в пост   
+
+        const list = document.getElementById('posts-list'); // ищет в докукменте id post-list
+                                                            // и записывает в list
+
+        posts.forEach(post => {                     // для каждого элемента массива post  
+          const li = document.createElement('li');  // создать список li и записать в Li         
+          li.innerHTML = `<strong>${post.title}</strong>: ${post.body}`;  // каждому элементу внутри
+                                                                          //  html сделать title и body
+          list.appendChild(li); // созданный элемент li добавить в конец элемента List
+        });
+      } catch (err) {            // если не выполнился try или люьая ошибка err внутри try
+        console.error('Ошибка загрузки постов:', err);  // вывести на консоль сообщение и детали ошибки
+      }
+    }
+
+    // Загружаем посты при открытии страницы
+    window.onload = loadPosts;
+  </script>
+</body>
+</html>

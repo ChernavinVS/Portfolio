@@ -13,27 +13,10 @@ import whatsappIcon from '../assets/whatsapp.png';
 // Импорт CSS для стилизации компонента
 import './VisitingCard.css';
 
-const VisitingCard = () => {
+const Contakts = () => {
   return (
     <div className="container">
-      {/* Верхняя часть с фоном и заголовками */}
-      <div className="header-section">
-        <div className="header-top">
-          <h5>Проектирование</h5>
-          <h5>Разработка</h5>
-          <h5>Эксплуатация</h5>
-        </div>
-        <div className="main-title">
-          <h1>
-            <span className="highlight">Проектирование</span> и разработка <br /> средств{' '}
-            <span className="highlight">автоматизации</span> производств <span className="highlight">и технологических</span> <br /> процессов
-          </h1>
-        </div>
-        <div className="header-bottom">
-          <h5>Наладка</h5>
-          <h5>Сопровождение</h5>
-        </div>
-      </div>
+      
 
       {/* Основной контент */}
       <div className="content-section">
@@ -104,4 +87,4 @@ const VisitingCard = () => {
   );
 };
 
-export default VisitingCard;
+export default Contakts;

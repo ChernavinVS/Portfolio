@@ -1,7 +1,8 @@
 import React from 'react';
 import VisitingCard from './Components/VisitingCard';
-import PostForm from './PostForm';
-import Posts from './Posts';
+import PostForm from './Components/PostForm';
+import Posts from './Components/Posts';
+import Contakts from './Components/Contakts';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Posts/> 
       <PostForm />
       <VisitingCard />
+      <Contakts/>
     </>
   );
 }

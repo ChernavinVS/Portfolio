@@ -1,15 +1,16 @@
 import axios from 'axios';
+// import Posts from './Components/Posts';
 
-const API_URL = "https://localhost:5000/projects";
+const API_URL = "https://localhost:5000/posts";
 
 // Получение всех постов
-export const getProject = () => axios.get(API_URL);
+export const getPosts = () => axios.get(API_URL);
 
 // Создание поста
-export const createProject = (projects) => axios.post(API_URL, projects);
+export const createPosts = (Posts) => axios.post(API_URL, Posts);
 
 // Обновление поста
-export const updateProject = (id, updateProject) => axios.put(`${API_URL}/${id}`, updateProject);
+export const updatePosts = (id, updatePosts) => axios.put(`${API_URL}/${id}`, updatePosts);
 
 // Удаление поста`
-export const deleteProject = (id) => axios.delete(`${API_URL}/${id}`);
+export const deletePosts = (id) => axios.delete(`${API_URL}/${id}`);
