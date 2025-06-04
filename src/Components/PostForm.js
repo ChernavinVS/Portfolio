@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';  // useState текущее состояние компонента PostForm
 import axios from 'axios';
 
-function PostForm({ onPostAdded }) {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+function PostForm({ onPostAdded }) {      //Компонент
+                                          //PostForm, который принимает пропс onPostAdded
+  const [title, setTitle] = useState(''); //setTitle присвает заголовку состояние
+                                          //useState как пустую строку
+  const [body, setBody] = useState('');   //то же самое для текста поста
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (title.trim() && body.trim()) {
+    e.preventDefault();                   //Предотвращает перезагрузку страницы при событии event
+    if (title.trim() && body.trim()) {    // убирает пробелы. 
       axios.post('http://localhost:5000/posts', { title, body })
-        .then(() => {
-          setTitle('');
-          setBody('');
-          onPostAdded();
-        })
-        .catch(err => console.error('Ошибка добавления поста:', err));
+        .then(() => {                      // Если запрос успешный то очищаем заголовок и пост
+          setTitle('');                    // чтобы при добавлении нового поста  
+          setBody('');                     // заголовок и пост были пустые строки
+          onPostAdded();                   //вызываем пропс для обновления списка в компоненте PostForm
+         })
+        .catch(err => console.error('Ошибка добавления поста:', err)); // если запрос не выполнился
+                                                                       //выводится на консоль сообщение и данные ошибки
     }
   };
 
-  return (
-
-
-    
+  return (    
     <div style={{ marginBottom: '20px' }}>
       <h2 style={{ textAlign: 'start', marginBottom: '20px' , marginLeft :'10px'}}>Добавить пост</h2>
       <form onSubmit={handleSubmit}>
